@@ -6,7 +6,7 @@ int help_is_bst(const binary_tree_t *tree, int low, int high);
  * binary_tree_is_bst - Checks if a binary tree is a valid Binary Search Tree
  * @tree: the root of the binary tree to be checked
  * Return: 1 If TRUE or 0 if false and FAILURE
- */
+*/
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
 	if (tree == NULL)
@@ -20,7 +20,7 @@ int binary_tree_is_bst(const binary_tree_t *tree)
  * @low: The value of the smallest node
  * @high: The value of the largest node
  * Return: 1 If TRUE or 0 if false
- */
+*/
 int help_is_bst(const binary_tree_t *tree, int low, int high)
 {
 	if (tree != NULL)

@@ -4,7 +4,7 @@
  * @tree: root node of the Binary search tree
  * @value: the data to be stored in the new node
  * Return: created node or NULL on FAILURE
- */
+*/
 bst_t *bst_insert(bst_t **tree, int value)
 {
 	bst_t *current, *new;
