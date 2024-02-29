@@ -4,7 +4,12 @@ size_t get_depth(const binary_tree_t *tree);
 binary_tree_t *help_ancestor(const binary_tree_t *first,
 	const binary_tree_t *second, size_t depth_first, size_t depth_second);
 
-/***/
+/**
+ * binary_trees_ancestor - finds the lowest common ancestor of two nodes
+ * @first: the first node
+ * @second: the second node
+ * Return: common ancestor or NULL on FAILURE
+*/
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	const binary_tree_t *second)
 {
@@ -15,7 +20,14 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 	return (help_ancestor(first, second, get_depth(first), get_depth(second)));
 }
 
-/***/
+/**
+ * help_ancestor - helps find common ancestor
+ * @first: first node
+ * @second: second node
+ * @depth_first: the depth of first node
+ * @depth_second: the depth of second node
+ * Return: common ancestor or NULL on FAILURE
+*/
 binary_tree_t *help_ancestor(const binary_tree_t *first,
 	const binary_tree_t *second, size_t depth_first, size_t depth_second)
 {
@@ -28,7 +40,7 @@ binary_tree_t *help_ancestor(const binary_tree_t *first,
 		if (parent_f == second)
 			return ((binary_tree_t *)second);
 		f--;
-		parent_f = parent_f->parent;	
+		parent_f = parent_f->parent;
 	}
 	while (f < s)
 	{
